@@ -8,11 +8,13 @@ public class QuantityMeasurementAppTest {
 
     @Test
     void testFeetEquality_SameValue() {
+
         assertTrue(QuantityMeasurementApp.compareFeet(1.0, 1.0));
     }
 
     @Test
     void testFeetEquality_DifferentValue() {
+
         assertFalse(QuantityMeasurementApp.compareFeet(1.0, 2.0));
     }
 
