@@ -35,10 +35,13 @@ public class QuantityLength {
 
         return target.fromFeet(valueToFeet);
     }
-
-    public QuantityLength convertTo(LengthUnit target) {
-        double converted = convert(this.value, this.unit, target);
-        return new QuantityLength(converted, target);
+    public QuantityLength add(QuantityLength thatLength){
+        if(thatLength==null)
+            throw  new IllegalArgumentException("value annot be null");
+        double thisInFeet = this.unit.toFeet(this.value);
+        double thatLengthInFeet = thatLength.unit.toFeet(thatLength.value);
+        double result  = thisInFeet+thatLengthInFeet;
+        return new QuantityLength(result , this.unit);
     }
 
     @Override
