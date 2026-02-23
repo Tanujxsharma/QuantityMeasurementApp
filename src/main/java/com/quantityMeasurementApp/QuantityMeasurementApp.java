@@ -25,5 +25,10 @@ public class QuantityMeasurementApp {
                 new QuantityLength(1.0, LengthUnit.YARD),
                 new QuantityLength(3.0, LengthUnit.FEET)
         );
+        QuantityWeight w1 = new QuantityWeight(1.0, WeightUnit.KILOGRAM);
+        QuantityWeight w2 = new QuantityWeight(1000.0, WeightUnit.GRAM);
+
+        System.out.println(w1.equals(w2));
+        System.out.println(w1.add(w2));
     }
 }
