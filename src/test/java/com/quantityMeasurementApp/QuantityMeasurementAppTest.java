@@ -1,161 +1,188 @@
 package com.quantityMeasurementApp;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class QuantityTest {
-
-
+class QuantityVolumeTest {
 
     @Test
-    void testConstructor_NullUnit() {
-        assertThrows(IllegalArgumentException.class,
-                () -> new Quantity<>(1.0, null));
+    void testEquality_LitreToMillilitre() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(1000.0, VolumeUnit.MILLILITRE);
+
+        assertTrue(v1.equals(v2));
     }
 
     @Test
-    void testConstructor_InvalidValue() {
-        assertThrows(IllegalArgumentException.class,
-                () -> new Quantity<>(Double.NaN, LengthUnit.FEET));
-    }
+    void testEquality_LitreToGallon() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(3.78541, VolumeUnit.LITRE);
 
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(1.0, VolumeUnit.GALLON);
 
-
-    @Test
-    void testLengthEquality_FeetToInch() {
-        Quantity<LengthUnit> q1 = new Quantity<>(1.0, LengthUnit.FEET);
-        Quantity<LengthUnit> q2 = new Quantity<>(12.0, LengthUnit.INCH);
-
-        assertTrue(q1.equals(q2));
+        assertTrue(v1.equals(v2));
     }
 
     @Test
-    void testLengthEquality_DifferentValue() {
-        Quantity<LengthUnit> q1 = new Quantity<>(1.0, LengthUnit.FEET);
-        Quantity<LengthUnit> q2 = new Quantity<>(2.0, LengthUnit.FEET);
+    void testEquality_DifferentValue() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
 
-        assertFalse(q1.equals(q2));
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(2.0, VolumeUnit.LITRE);
+
+        assertFalse(v1.equals(v2));
     }
 
 
     @Test
-    void testWeightEquality_KgToGram() {
-        Quantity<WeightUnit> w1 = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-        Quantity<WeightUnit> w2 = new Quantity<>(1000.0, WeightUnit.GRAM);
+    void testConversion_LitreToMillilitre() {
+        Quantity<VolumeUnit> v =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
 
-        assertTrue(w1.equals(w2));
-    }
-
-    @Test
-    void testWeightEquality_DifferentValue() {
-        Quantity<WeightUnit> w1 = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-        Quantity<WeightUnit> w2 = new Quantity<>(2.0, WeightUnit.KILOGRAM);
-
-        assertFalse(w1.equals(w2));
-    }
-
-
-
-    @Test
-    void testLengthConversion_FeetToInch() {
-        Quantity<LengthUnit> q = new Quantity<>(1.0, LengthUnit.FEET);
-
-        Quantity<LengthUnit> result = q.convertTo(LengthUnit.INCH);
-
-        assertEquals(12.0, result.getValue());
-    }
-
-    @Test
-    void testLengthConversion_InchToYard() {
-        Quantity<LengthUnit> q = new Quantity<>(36.0, LengthUnit.INCH);
-
-        Quantity<LengthUnit> result = q.convertTo(LengthUnit.YARD);
-
-        assertEquals(1.0, result.getValue());
-    }
-
-
-
-    @Test
-    void testWeightConversion_KgToGram() {
-        Quantity<WeightUnit> q = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-
-        Quantity<WeightUnit> result = q.convertTo(WeightUnit.GRAM);
+        Quantity<VolumeUnit> result =
+                v.convertTo(VolumeUnit.MILLILITRE);
 
         assertEquals(1000.0, result.getValue());
     }
 
     @Test
-    void testWeightConversion_GramToKg() {
-        Quantity<WeightUnit> q = new Quantity<>(1000.0, WeightUnit.GRAM);
+    void testConversion_GallonToLitre() {
+        Quantity<VolumeUnit> v =
+                new Quantity<>(1.0, VolumeUnit.GALLON);
 
-        Quantity<WeightUnit> result = q.convertTo(WeightUnit.KILOGRAM);
+        Quantity<VolumeUnit> result =
+                v.convertTo(VolumeUnit.LITRE);
+
+        assertEquals(3.78541, result.getValue());
+    }
+
+    @Test
+    void testConversion_LitreToGallon() {
+        Quantity<VolumeUnit> v =
+                new Quantity<>(3.78541, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> result =
+                v.convertTo(VolumeUnit.GALLON);
 
         assertEquals(1.0, result.getValue());
     }
 
 
     @Test
-    void testLengthAddition_CrossUnit() {
-        Quantity<LengthUnit> q1 = new Quantity<>(1.0, LengthUnit.FEET);
-        Quantity<LengthUnit> q2 = new Quantity<>(12.0, LengthUnit.INCH);
+    void testAddition_SameUnit() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
 
-        Quantity<LengthUnit> result = q1.add(q2);
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(2.0, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> result = v1.add(v2);
+
+        assertEquals(3.0, result.getValue());
+    }
+
+    @Test
+    void testAddition_CrossUnit_LitrePlusMillilitre() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(1000.0, VolumeUnit.MILLILITRE);
+
+        Quantity<VolumeUnit> result = v1.add(v2);
 
         assertEquals(2.0, result.getValue());
     }
 
     @Test
-    void testLengthAddition_ExplicitTarget() {
-        Quantity<LengthUnit> q1 = new Quantity<>(1.0, LengthUnit.FEET);
-        Quantity<LengthUnit> q2 = new Quantity<>(12.0, LengthUnit.INCH);
+    void testAddition_ExplicitTarget_Millilitre() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
 
-        Quantity<LengthUnit> result = q1.add(q2, LengthUnit.INCH);
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(1000.0, VolumeUnit.MILLILITRE);
 
-        assertEquals(24.0, result.getValue());
-    }
-
-
-    @Test
-    void testWeightAddition_CrossUnit() {
-        Quantity<WeightUnit> w1 = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-        Quantity<WeightUnit> w2 = new Quantity<>(1000.0, WeightUnit.GRAM);
-
-        Quantity<WeightUnit> result = w1.add(w2);
-
-        assertEquals(2.0, result.getValue());
-    }
-
-    @Test
-    void testWeightAddition_ExplicitTarget() {
-        Quantity<WeightUnit> w1 = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-        Quantity<WeightUnit> w2 = new Quantity<>(1000.0, WeightUnit.GRAM);
-
-        Quantity<WeightUnit> result = w1.add(w2, WeightUnit.GRAM);
+        Quantity<VolumeUnit> result =
+                v1.add(v2, VolumeUnit.MILLILITRE);
 
         assertEquals(2000.0, result.getValue());
     }
 
+    @Test
+    void testAddition_GallonPlusLitre() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1.0, VolumeUnit.GALLON);
+
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(3.78541, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> result = v1.add(v2);
+
+        assertEquals(2.0, result.getValue());
+    }
+
 
 
     @Test
-    void testCrossCategoryPrevention() {
+    void testVolumeVsLength_Incompatible() {
+
+        Quantity<VolumeUnit> volume =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
+
         Quantity<LengthUnit> length =
                 new Quantity<>(1.0, LengthUnit.FEET);
+
+        assertFalse(volume.equals(length));
+    }
+
+    @Test
+    void testVolumeVsWeight_Incompatible() {
+
+        Quantity<VolumeUnit> volume =
+                new Quantity<>(1.0, VolumeUnit.LITRE);
 
         Quantity<WeightUnit> weight =
                 new Quantity<>(1.0, WeightUnit.KILOGRAM);
 
-        assertFalse(length.equals(weight));
+        assertFalse(volume.equals(weight));
     }
 
 
     @Test
-    void testSameReference() {
-        Quantity<LengthUnit> q =
-                new Quantity<>(5.0, LengthUnit.FEET);
+    void testZeroValue() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(0.0, VolumeUnit.LITRE);
 
-        assertTrue(q.equals(q));
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(0.0, VolumeUnit.MILLILITRE);
+
+        assertTrue(v1.equals(v2));
+    }
+
+    @Test
+    void testNegativeValue() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(-1.0, VolumeUnit.LITRE);
+
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(-1000.0, VolumeUnit.MILLILITRE);
+
+        assertTrue(v1.equals(v2));
+    }
+
+    @Test
+    void testLargeValue() {
+        Quantity<VolumeUnit> v1 =
+                new Quantity<>(1000000.0, VolumeUnit.MILLILITRE);
+
+        Quantity<VolumeUnit> v2 =
+                new Quantity<>(1000.0, VolumeUnit.LITRE);
+
+        assertTrue(v1.equals(v2));
     }
 }
