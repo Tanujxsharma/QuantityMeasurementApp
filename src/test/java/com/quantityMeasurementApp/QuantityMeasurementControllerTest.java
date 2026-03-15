@@ -1,24 +1,26 @@
 package com.quantityMeasurementApp;
+
 import com.quantityMeasurementApp.controller.QuantityMeasurementController;
 import com.quantityMeasurementApp.dto.QuantityDTO;
 import com.quantityMeasurementApp.repository.QuantityMeasurementCacheRepository;
 import com.quantityMeasurementApp.service.QuantityMeasurementServiceImpl;
 
-public class QuantityMeasurementApp {
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
+class QuantityMeasurementControllerTest {
 
-        QuantityMeasurementCacheRepository repo =
-                QuantityMeasurementCacheRepository.getInstance();
-
-        QuantityMeasurementServiceImpl service =
-                new QuantityMeasurementServiceImpl(repo);
+    @Test
+    void testController_Addition(){
 
         QuantityMeasurementController controller =
-                new QuantityMeasurementController(service);
+                new QuantityMeasurementController(
+                        new QuantityMeasurementServiceImpl(
+                                QuantityMeasurementCacheRepository.getInstance()
+                        )
+                );
 
         QuantityDTO q1 =
-                new QuantityDTO(10,"FEET","LENGTH");
+                new QuantityDTO(1,"FEET","LENGTH");
 
         QuantityDTO q2 =
                 new QuantityDTO(12,"INCH","LENGTH");
