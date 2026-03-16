@@ -3,28 +3,36 @@ package com.quantityMeasurementApp.repository;
 import com.quantityMeasurementApp.entity.QuantityMeasurementEntity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class QuantityMeasurementCacheRepository
         implements IQuantityMeasurementRepository {
 
-    private static QuantityMeasurementCacheRepository instance;
+    // ✅ Eager initialization — thread-safe, no race condition
+    private static final QuantityMeasurementCacheRepository instance =
+            new QuantityMeasurementCacheRepository();
 
-    private List<QuantityMeasurementEntity> cache = new ArrayList<>();
+    // ✅ Thread-safe list
+    private final List<QuantityMeasurementEntity> cache =
+            Collections.synchronizedList(new ArrayList<>());
 
     private QuantityMeasurementCacheRepository(){}
 
     public static QuantityMeasurementCacheRepository getInstance(){
-        if(instance == null)
-            instance = new QuantityMeasurementCacheRepository();
         return instance;
     }
 
+    @Override
     public void save(QuantityMeasurementEntity entity){
+        if(entity == null){
+            throw new IllegalArgumentException("Entity cannot be null");
+        }
         cache.add(entity);
     }
 
+    @Override
     public List<QuantityMeasurementEntity> findAll(){
-        return cache;
+        return Collections.unmodifiableList(cache); // ✅ Bahar se modify na ho
     }
 }

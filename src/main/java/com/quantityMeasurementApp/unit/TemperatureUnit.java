@@ -1,34 +1,24 @@
 package com.quantityMeasurementApp.unit;
+
 import java.util.function.Function;
 
 public enum TemperatureUnit implements IMeasurable {
 
+    // ✅ Lambda seedha constructor mein diya — this.name() wali problem khatam
+    CELSIUS(v -> v, v -> v),
+    FAHRENHEIT(v -> (v - 32) * 5.0 / 9.0, v -> (v * 9.0 / 5.0) + 32),
+    KELVIN(v -> v - 273.15, v -> v + 273.15);
 
-    CELSIUS(false),
-    FAHRENHEIT(true),
-    KELVIN(false);
+    private final Function<Double, Double> toBase;
+    private final Function<Double, Double> fromBase;
 
+    // ✅ SupportsArithmetic ka simple boolean field — FunctionalInterface overkill tha
+    private final boolean arithmeticSupported = false;
 
-    final Function<Double, Double> FAHRENHEIT_TO_CELSIUS = (fahrenheit) -> (fahrenheit - 32)*5/9;
-
-    final Function<Double, Double> CELSIUS_TO_CELSIUS = (celsius) -> celsius;
-
-    final Function<Double, Double> KELVIN_TO_CELSIUS = k -> k - 273.15;
-
-    Function<Double, Double> conversionValue;
-
-    SupportsArithmetic supportsArithmetic = ()->false;
-
-    TemperatureUnit(boolean isFahrenheit){
-        if (this.name().equals("FAHRENHEIT")) {
-            this.conversionValue = FAHRENHEIT_TO_CELSIUS;
-        } else if (this.name().equals("KELVIN")) {
-            this.conversionValue = KELVIN_TO_CELSIUS;
-        } else {
-            this.conversionValue = CELSIUS_TO_CELSIUS;
-        }
+    TemperatureUnit(Function<Double, Double> toBase, Function<Double, Double> fromBase){
+        this.toBase = toBase;
+        this.fromBase = fromBase;
     }
-
 
     @Override
     public double getConversionValue() {
@@ -37,19 +27,12 @@ public enum TemperatureUnit implements IMeasurable {
 
     @Override
     public double convertToBaseUnit(double value) {
-        return conversionValue.apply(value);
+        return toBase.apply(value);
     }
 
     @Override
     public double convertFromBaseUnit(double baseValue) {
-        switch (this) {
-            case FAHRENHEIT:
-                return (baseValue * 9 / 5) + 32;
-            case KELVIN:
-                return baseValue + 273.15;
-            default:
-                return baseValue; // CELSIUS
-        }
+        return fromBase.apply(baseValue);
     }
 
     @Override
@@ -69,7 +52,22 @@ public enum TemperatureUnit implements IMeasurable {
                 return unit;
             }
         }
-        throw new IllegalArgumentException("Invalid temperature unit:" + unitName);
+        throw new IllegalArgumentException("Invalid temperature unit: " + unitName);
+    }
+
+    // ✅ Temperature arithmetic support nahi karta
+    @Override
+    public boolean supportArithmetic(){
+        return arithmeticSupported;
+    }
+
+    @Override
+    public void validOperationSupport(String operation) {
+        if (!arithmeticSupported) {
+            throw new UnsupportedOperationException(
+                    this.name() + " does not support " + operation + " operations."
+            );
+        }
     }
 
     public double convertTo(double value, TemperatureUnit targetUnit) {
@@ -77,34 +75,8 @@ public enum TemperatureUnit implements IMeasurable {
         return targetUnit.convertFromBaseUnit(baseValue);
     }
 
-    public boolean supportsArithmetic() {
-        return supportsArithmetic.isSupported();
-    }
-
-    @Override
-    public void validOperationSupport(String operation) {
-        if (!supportsArithmetic.isSupported()) {
-            String message = this.name() + " does not support " + operation + " operations.";
-            throw new UnsupportedOperationException(message);
-        }
-    }
-
     @Override
     public String toString() {
         return this.name();
-    }
-
-    public static void main(String[] args) {
-        System.out.println("TemperatureUnit Enum");
-
-        for (TemperatureUnit unit : TemperatureUnit.values()) {
-            System.out.println(unit + " supports arithmetic: " + unit.supportsArithmetic());
-        }
-
-        System.out.println("0C to F = " +
-                TemperatureUnit.CELSIUS.convertTo(0, TemperatureUnit.FAHRENHEIT));
-
-        System.out.println("32F to C = " +
-                TemperatureUnit.FAHRENHEIT.convertTo(32, TemperatureUnit.CELSIUS));
     }
 }

@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6cf764c2-9534-4baa-b2da-96bf05f52565" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/IMeasurable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/QuantityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/VolumeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/VolumeUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/WeightUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/model/QuantityModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/model/QuantityModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/QuantityMeasurementCacheRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/QuantityMeasurementCacheRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/IMeasurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +102,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/quantityMeasurementApp/QuantityMeasurementServiceTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/IMeasurable.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

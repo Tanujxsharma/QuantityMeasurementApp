@@ -2,7 +2,7 @@ package com.quantityMeasurementApp.unit;
 
 public enum LengthUnit implements IMeasurable {
     FEET(12.0),
-    INCHES(1.0),
+    INCH(1.0),       // ✅ INCHES → INCH (DTO se match karta hai)
     YARDS(36.0),
     CENTIMETERS(0.393701);
 
@@ -23,10 +23,14 @@ public enum LengthUnit implements IMeasurable {
     }
 
     @Override
-    public double convertFromBaseUnit(double baseValue){return baseValue/conversionFactor;}
+    public double convertFromBaseUnit(double baseValue){
+        return baseValue / conversionFactor;
+    }
 
     @Override
-    public String getUnitName() {return this.name();}
+    public String getUnitName() {
+        return this.name();
+    }
 
     @Override
     public String getMeasurementType(){
