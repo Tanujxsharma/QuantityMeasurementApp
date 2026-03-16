@@ -6,25 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6cf764c2-9534-4baa-b2da-96bf05f52565" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/ArithmeticOperation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/IMeasurable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/LengthUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/Quantity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/TemperatureUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/VolumeUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/WeightUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantityMeasurementApp/QuantityMeasurementAppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/ArithmeticOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/IMeasurable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/LengthUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/Quantity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/QuantityMeasurementApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/QuantityMeasurementApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/SupportsArithmetic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/TemperatureUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/VolumeUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantityMeasurementApp/WeightUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quantityMeasurementApp/QuantityMeasurementAppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/IMeasurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/QuantityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/VolumeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/VolumeUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/domain/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/WeightUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/model/QuantityModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/model/QuantityModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.QuantityMeasurementAppTest.executor": "Run",
-    "JUnit.QuantityMeasurementControllerTest.executor": "Run",
-    "JUnit.QuantityMeasurementServiceTest.executor": "Run",
-    "JUnit.QuantityMeasurementServiceTest.testAddition_Length.executor": "Debug",
-    "JUnit.QuantityVolumeTest.executor": "Run",
-    "JUnit.com.quantityMeasurementApp.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/UC15-N-tier-architecture",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/QuantityMeasurementApp",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.QuantityMeasurementAppTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuantityMeasurementControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuantityMeasurementServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuantityMeasurementServiceTest.testAddition_Length.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.QuantityVolumeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.quantityMeasurementApp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/UC15-N-tier-architecture&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/QuantityMeasurementApp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="com.quantityMeasurementApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage">

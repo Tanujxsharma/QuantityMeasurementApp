@@ -1,4 +1,4 @@
-package com.quantityMeasurementApp.domain;
+package com.quantityMeasurementApp.unit;
 
 public class Quantity<U extends IMeasurable> {
     private double value;

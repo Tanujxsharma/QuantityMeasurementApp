@@ -1,4 +1,4 @@
-package com.quantityMeasurementApp.domain;
+package com.quantityMeasurementApp.unit;
 
 public enum LengthUnit implements IMeasurable {
     FEET(12.0),

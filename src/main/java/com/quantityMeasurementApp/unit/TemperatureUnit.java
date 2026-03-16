@@ -1,4 +1,4 @@
-package com.quantityMeasurementApp.domain;
+package com.quantityMeasurementApp.unit;
 import java.util.function.Function;
 
 public enum TemperatureUnit implements IMeasurable {

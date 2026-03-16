@@ -1,4 +1,4 @@
-package com.quantityMeasurementApp.dto;
+package com.quantityMeasurementApp.entity;
 
 public class QuantityDTO {
 
