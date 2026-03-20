@@ -1,6 +1,0 @@
-db.url=jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:db/schema.sql'
-db.username=sa
-db.password=
-db.driver=org.h2.Driver
-db.pool.size=5
-repository.type=database

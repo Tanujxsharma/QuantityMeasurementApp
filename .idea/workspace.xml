@@ -4,114 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cf764c2-9534-4baa-b2da-96bf05f52565" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/controller/QuantityMeasurementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/controller/QuantityMeasurementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/entity/QuantityMeasurementEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/entity/QuantityMeasurementEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/entity/QuantityModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/entity/QuantityModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/exception/QuantityMeasurementException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/exception/QuantityMeasurementException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/IQuantityMeasurementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/IQuantityMeasurementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/QuantityMeasurementCacheRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/repository/QuantityMeasurementCacheRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/service/QuantityMeasurementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/LengthUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/Quantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/TemperatureUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/VolumeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/VolumeUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantityMeasurementApp/unit/WeightUnit.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0813757-7710-41fa-a002-fe1898d483ed" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="3A6Up4hPgRt2KP2lqSZ2BTBwJ1T" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3BCRTYl6v0sJcxODuXK1lX8ijOX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.QuantityMeasurementAppTest.executor": "Run",
-    "JUnit.QuantityMeasurementControllerTest.executor": "Run",
-    "JUnit.QuantityMeasurementServiceTest.executor": "Run",
-    "JUnit.QuantityMeasurementServiceTest.testAddition_Length.executor": "Debug",
-    "JUnit.QuantityVolumeTest.executor": "Run",
-    "JUnit.com.quantityMeasurementApp.executor": "Run",
+    "Application.Application.executor": "Run",
+    "Application.QuantityMeasurementAppApplication.executor": "Run",
+    "JUnit.ApplicationTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/UC16-Database-Integration",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/QuantityMeasurementApp",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "C:/Users/Tanuj/Desktop/QuantityMeasurementApp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="com.quantityMeasurementApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.quantityMeasurementApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="24" />
-      <option name="PACKAGE_NAME" value="com.quantityMeasurementApp" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.com.quantityMeasurementApp" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6cf764c2-9534-4baa-b2da-96bf05f52565" name="Changes" comment="" />
-      <created>1771912697235</created>
+      <changelist id="e0813757-7710-41fa-a002-fe1898d483ed" name="Changes" comment="" />
+      <created>1773991073735</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1771912697235</updated>
+      <updated>1773991073735</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/quantityMeasurementApp/QuantityMeasurementServiceTest.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
