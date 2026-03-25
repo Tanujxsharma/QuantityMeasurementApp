@@ -32,7 +32,7 @@ public class QuantityMeasurementController {
         this.service = service;
     }
 
-    // ── POST operations ──────────────────────────────────────────
+    // ── POST operations ──────────────-----------------------------
 
     @PostMapping("/compare")
     @Operation(summary = "Compare two quantities",

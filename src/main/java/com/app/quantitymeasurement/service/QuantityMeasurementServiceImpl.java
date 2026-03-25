@@ -42,20 +42,35 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
 
     // ── Unit resolution ──────────────────────────────────────────
 
-    private IMeasurable resolveUnit(String measurementType, String unitName) {
-        return switch (measurementType) {
-            case "LengthUnit"      -> LengthUnit.FEET.getUnitInstance(unitName);
-            case "WeightUnit"      -> WeightUnit.KILOGRAM.getUnitInstance(unitName);
-            case "VolumeUnit"      -> VolumeUnit.LITRE.getUnitInstance(unitName);
-            case "TemperatureUnit" -> TemperatureUnit.CELSIUS.getUnitInstance(unitName);
-            default -> throw new QuantityMeasurementException(
-                    "Unknown measurement type: " + measurementType);
-        };
+    private IMeasurable resolveUnit(String unitName) {
+
+        try {
+            return LengthUnit.valueOf(unitName.toUpperCase());
+        } catch (Exception ignored) {}
+
+        try {
+            return WeightUnit.valueOf(unitName.toUpperCase());
+        } catch (Exception ignored) {}
+
+        try {
+            return VolumeUnit.valueOf(unitName.toUpperCase());
+        } catch (Exception ignored) {}
+
+        try {
+            return TemperatureUnit.valueOf(unitName.toUpperCase());
+        } catch (Exception ignored) {}
+
+        throw new QuantityMeasurementException("Invalid unit: " + unitName);
     }
 
     private QuantityModel<IMeasurable> toModel(QuantityDTO dto) {
-        if (dto == null) throw new QuantityMeasurementException("QuantityDTO cannot be null");
-        return new QuantityModel<>(dto.getValue(), resolveUnit(dto.getMeasurementType(), dto.getUnit()));
+
+        if (dto == null)
+            throw new QuantityMeasurementException("QuantityDTO cannot be null");
+
+        IMeasurable unit = resolveUnit(dto.getUnit());
+
+        return new QuantityModel<>(dto.getValue(), unit);
     }
 
     // ── Entity builder helper ────────────────────────────────────
@@ -124,7 +139,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
     public QuantityMeasurementDTO convert(QuantityDTO dto, String targetUnitName) {
         QuantityModel<IMeasurable> m = toModel(dto);
         try {
-            IMeasurable targetUnit = resolveUnit(dto.getMeasurementType(), targetUnitName);
+            IMeasurable targetUnit = resolveUnit(targetUnitName);
             Quantity<IMeasurable> converted =
                     new Quantity<>(m.getValue(), m.getUnit()).convertTo(targetUnit);
             QuantityModel<IMeasurable> resultModel =
@@ -151,7 +166,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
         QuantityModel<IMeasurable> m1 = toModel(dto1);
         QuantityModel<IMeasurable> m2 = toModel(dto2);
         try {
-            IMeasurable targetUnit = resolveUnit(dto1.getMeasurementType(), targetUnitName);
+            IMeasurable targetUnit = resolveUnit(targetUnitName);
             Quantity<IMeasurable> result =
                     new Quantity<>(m1.getValue(), m1.getUnit())
                     .add(new Quantity<>(m2.getValue(), m2.getUnit()), targetUnit);
@@ -179,7 +194,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
         QuantityModel<IMeasurable> m1 = toModel(dto1);
         QuantityModel<IMeasurable> m2 = toModel(dto2);
         try {
-            IMeasurable targetUnit = resolveUnit(dto1.getMeasurementType(), targetUnitName);
+            IMeasurable targetUnit = resolveUnit(targetUnitName);
             Quantity<IMeasurable> result =
                     new Quantity<>(m1.getValue(), m1.getUnit())
                     .subtract(new Quantity<>(m2.getValue(), m2.getUnit()), targetUnit);
