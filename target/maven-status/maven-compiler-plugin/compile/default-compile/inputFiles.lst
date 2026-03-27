@@ -1,4 +1,6 @@
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\Application.java
+E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\config\SecurityConfig.java
+E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\controller\AuthController.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\controller\QuantityMeasurementController.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\core\Quantity.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\dto\QuantityMeasurementDTO.java
@@ -16,5 +18,7 @@ E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\model\Temper
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\model\VolumeUnit.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\model\WeightUnit.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\repository\IQuantityMeasurementRepository.java
+E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\security\JwtFilter.java
+E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\security\JwtUtil.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\service\IQuantityMeasurementService.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\service\QuantityMeasurementServiceImpl.java

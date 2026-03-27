@@ -1,7 +1,7 @@
 com\app\quantitymeasurement\repository\IQuantityMeasurementRepository.class
-com\app\quantitymeasurement\entity\QuantityDTO$WeightUnit.class
-com\app\quantitymeasurement\entity\QuantityDTO$LengthUnit.class
+com\app\quantitymeasurement\controller\AuthController.class
 com\app\quantitymeasurement\exeption\GlobalExceptionHandler.class
+com\app\quantitymeasurement\config\SecurityConfig.class
 com\app\quantitymeasurement\service\QuantityMeasurementServiceImpl.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation$2.class
 com\app\quantitymeasurement\controller\QuantityMeasurementController.class
@@ -9,8 +9,8 @@ com\app\quantitymeasurement\model\WeightUnit.class
 com\app\quantitymeasurement\entity\QuantityModel.class
 com\app\quantitymeasurement\dto\request\ArithmeticRequestDTO.class
 com\app\quantitymeasurement\entity\QuantityDTO.class
-com\app\quantitymeasurement\entity\QuantityDTO$TemperatureUnit.class
 com\app\quantitymeasurement\dto\request\CompareRequestDTO.class
+com\app\quantitymeasurement\security\JwtUtil.class
 com\app\quantitymeasurement\model\IMeasurable.class
 com\app\quantitymeasurement\Application.class
 com\app\quantitymeasurement\model\SupportsArithmetic.class
@@ -20,10 +20,9 @@ com\app\quantitymeasurement\model\TemperatureUnit.class
 com\app\quantitymeasurement\dto\QuantityMeasurementDTO.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation.class
 com\app\quantitymeasurement\exeption\QuantityMeasurementException.class
-com\app\quantitymeasurement\entity\IMeasurableUnit.class
-com\app\quantitymeasurement\entity\QuantityDTO$VolumeUnit.class
 com\app\quantitymeasurement\entity\QuantityMeasurementEntity.class
 com\app\quantitymeasurement\dto\request\ConvertRequestDTO.class
+com\app\quantitymeasurement\security\JwtFilter.class
 com\app\quantitymeasurement\core\Quantity.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation$1.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation$3.class
