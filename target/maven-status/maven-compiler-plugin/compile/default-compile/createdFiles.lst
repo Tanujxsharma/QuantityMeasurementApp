@@ -1,4 +1,7 @@
 com\app\quantitymeasurement\repository\IQuantityMeasurementRepository.class
+com\app\quantitymeasurement\entity\User$UserBuilder.class
+com\app\quantitymeasurement\security\SecurityConfigTest.class
+com\app\quantitymeasurement\config\CorsConfig.class
 com\app\quantitymeasurement\controller\AuthController.class
 com\app\quantitymeasurement\exeption\GlobalExceptionHandler.class
 com\app\quantitymeasurement\config\SecurityConfig.class
@@ -13,6 +16,7 @@ com\app\quantitymeasurement\dto\request\CompareRequestDTO.class
 com\app\quantitymeasurement\security\JwtUtil.class
 com\app\quantitymeasurement\model\IMeasurable.class
 com\app\quantitymeasurement\Application.class
+com\app\quantitymeasurement\entity\User.class
 com\app\quantitymeasurement\model\SupportsArithmetic.class
 com\app\quantitymeasurement\model\VolumeUnit.class
 com\app\quantitymeasurement\service\IQuantityMeasurementService.class
@@ -20,10 +24,13 @@ com\app\quantitymeasurement\model\TemperatureUnit.class
 com\app\quantitymeasurement\dto\QuantityMeasurementDTO.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation.class
 com\app\quantitymeasurement\exeption\QuantityMeasurementException.class
+com\app\quantitymeasurement\repository\UserRepository.class
 com\app\quantitymeasurement\entity\QuantityMeasurementEntity.class
 com\app\quantitymeasurement\dto\request\ConvertRequestDTO.class
 com\app\quantitymeasurement\security\JwtFilter.class
 com\app\quantitymeasurement\core\Quantity.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation$1.class
 com\app\quantitymeasurement\core\Quantity$ArithmeticOperation$3.class
+com\app\quantitymeasurement\config\CorsConfig$1.class
+com\app\quantitymeasurement\dto\request\AuthRequest.class
 com\app\quantitymeasurement\model\LengthUnit.class
