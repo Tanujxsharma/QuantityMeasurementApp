@@ -1,6 +1,5 @@
 com\app\quantitymeasurement\repository\IQuantityMeasurementRepository.class
 com\app\quantitymeasurement\entity\User$UserBuilder.class
-com\app\quantitymeasurement\security\SecurityConfigTest.class
 com\app\quantitymeasurement\config\CorsConfig.class
 com\app\quantitymeasurement\controller\AuthController.class
 com\app\quantitymeasurement\exeption\GlobalExceptionHandler.class

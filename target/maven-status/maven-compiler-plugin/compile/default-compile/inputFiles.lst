@@ -24,6 +24,5 @@ E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\repository\I
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\repository\UserRepository.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\security\JwtFilter.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\security\JwtUtil.java
-E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\security\SecurityConfigTest.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\service\IQuantityMeasurementService.java
 E:\QuantityMeasurementApp\src\main\java\com\app\quantitymeasurement\service\QuantityMeasurementServiceImpl.java
