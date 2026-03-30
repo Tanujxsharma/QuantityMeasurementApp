@@ -38,18 +38,24 @@ public class Quantity<U extends IMeasurable> {
 
     // Compares this quantity with other object for equality.
     @Override
-    public boolean equals(Object o){
-        if(o == this){
-            return true;
-        }
-        if(o == null || o.getClass() != this.getClass()){
+    public boolean equals(Object o) {
+        if (o == this) return true;
+
+        if (o == null || o.getClass() != this.getClass()) {
             return false;
         }
+
         Quantity<?> other = (Quantity<?>) o;
-        if(!this.unit.getClass().equals(other.unit.getClass())) {
+
+        if (!this.unit.getClass().equals(other.unit.getClass())) {
             return false;
         }
-        return Double.compare(unit.convertToBaseUnit(value), other.unit.convertToBaseUnit(other.value))==0;
+
+        double thisBase = unit.convertToBaseUnit(value);
+        double otherBase = other.unit.convertToBaseUnit(other.value);
+
+        // 🔥 FIX: use tolerance instead of exact compare
+        return Math.abs(thisBase - otherBase) < 0.0001;
     }
 
     // Arithmetic enum
